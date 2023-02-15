@@ -1,0 +1,79 @@
+body {
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2%;
+}
+
+.card {
+  background-color: hsl(0deg, 0%, 100%);
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.card-img img {
+  max-width: 100%;
+  width: 100%;
+}
+.card-info {
+  padding: 15px;
+}
+.card-info .card-cat {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  font-size: 14px;
+  color: hsl(212deg, 21%, 14%);
+}
+.card-info .card-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: hsl(212deg, 21%, 14%);
+  margin-bottom: 1rem;
+}
+.card-info .card-desc {
+  font-weight: normal;
+  font-size: 14px;
+  color: hsl(212deg, 21%, 14%);
+  margin-bottom: 1rem;
+}
+.card-info .card-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-info .card-price .new-price {
+  font-weight: bold;
+  font-size: 30px;
+  color: hsl(158deg, 36%, 37%);
+  margin-right: 1rem;
+}
+.card-info .card-price .old-price {
+  font-weight: normal;
+  font-size: 14px;
+  color: hsl(212deg, 21%, 14%);
+  text-decoration: line-through;
+}
+.card-info .card-btn button {
+  width: 100%;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.card-info .card-btn button img {
+  margin-right: 0.5rem;
+}/*# sourceMappingURL=style.css.map */

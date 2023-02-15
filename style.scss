@@ -1,0 +1,87 @@
+@import './variables';
+body{
+    background-color: $creamColor;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    grid-gap: 2%;
+}
+@mixin borderRadiuse($radius){
+    border-radius: $radius;
+}
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin font-prop($weight, $size, $color){
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+@mixin button-prop($width,$background, $color, $size, $border){
+    width: $width;
+    background-color: $background;
+    color: $color;
+    font-size: $size;
+    border:$border;
+    
+}
+.card{
+    background-color: $white;
+    overflow: hidden;
+    @include borderRadiuse(10px);
+    @include flex(column, space-between, center);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    &-img{
+        img{
+            max-width:100%;
+        width:100%;
+        }
+    }
+    &-info{
+        padding: 15px;
+        .card-cat{
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: .5rem;
+            @include font-prop(normal, 14px , $darkBlueColor);
+        }
+        .card-title{
+            @include font-prop(bold, 30px , $darkBlueColor);
+            margin-bottom: 1rem;
+        }
+        .card-desc{
+            @include font-prop(normal, 14px , $darkBlueColor);
+            margin-bottom: 1rem;
+        }
+        .card-price{
+            @include flex(row, flex-start, center);
+            margin-bottom: 1rem;
+            .new-price{
+                @include font-prop(bold, 30px , $darkCyanColor);
+                margin-right: 1rem;
+            }
+            .old-price{
+                @include font-prop(normal, 14px , $darkBlueColor);
+                text-decoration: line-through;
+            }
+        }
+        .card-btn{
+            button{
+                @include button-prop(100%, $darkCyanColor ,$white ,16px, 0);
+                @include borderRadiuse(5px);
+                padding: 10px 15px;
+                img{
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+    
